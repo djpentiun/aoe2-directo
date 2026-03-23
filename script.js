@@ -54,4 +54,10 @@ async function mostrarStreamers() {
                     </div>
                     <a class="boton" href="https://twitch.tv/${nombre}" target="_blank">Ver canal</a>
                 </div>
-            
+            </div>
+        `;
+    });
+}
+
+mostrarStreamers();
+setInterval(mostrarStreamers, 60000);
