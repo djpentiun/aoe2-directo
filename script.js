@@ -5,7 +5,7 @@ const STREAMERS = [
 ];
 
 async function mostrarStreamers() {
-    const res = await fetch("http://localhost:5000/streams");
+    const res = await fetch("https://aoe2-directo-production.up.railway.app/streams");
     const { streams, avatares } = await res.json();
     const listaNombresEnDirecto = streams.map(s => s.user_login.toLowerCase());
 
@@ -54,10 +54,4 @@ async function mostrarStreamers() {
                     </div>
                     <a class="boton" href="https://twitch.tv/${nombre}" target="_blank">Ver canal</a>
                 </div>
-            </div>
-        `;
-    });
-}
-
-mostrarStreamers();
-setInterval(mostrarStreamers, 60000);
+            
